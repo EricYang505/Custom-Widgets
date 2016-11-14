@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#ffffff">
+
+        <text.eric.com.eyedittext.EYEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:maxLength = "12"
+            app:labelText="UserName"
+            app:labelColor="@color/colorPrimaryDark"
+            app:preLineColor="@color/colorPrimary"
+            app:overlengthColor="@android:color/holo_red_dark"
+            android:hint="UserName"
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"/>
+
+        <text.eric.com.eyedittext.EYEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:maxLength = "12"
+            app:labelText="Password"
+            app:labelColor="@color/colorPrimaryDark"
+            app:preLineColor="@color/colorPrimary"
+            app:overlengthColor="@android:color/holo_red_dark"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"/>
+
+        <text.eric.com.eyedittext.EYEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:maxLength = "-1"
+            app:labelText="Unlimited input"
+            app:labelColor="@color/colorPrimaryDark"
+            app:preLineColor="@color/colorPrimary"
+            android:hint="Unlimited input"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"/>
+
+        <text.eric.com.eyedittext.EYEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/avatar"
+            android:drawablePadding="4dp"
+            app:maxLength = "12"
+            app:labelText="UserName"
+            app:labelColor="@color/colorPrimaryDark"
+            app:preLineColor="@color/colorPrimary"
+            app:overlengthColor="@android:color/holo_red_light"
+            android:hint="UserName"
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="0dp"
+            android:textSize="18sp"/>
+    </LinearLayout>
+</ScrollView>
