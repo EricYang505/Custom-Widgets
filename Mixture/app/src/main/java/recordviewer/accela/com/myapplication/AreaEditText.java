@@ -107,7 +107,7 @@ public class AreaEditText extends EditText{
             mCurStart = getSelectionStart();
             int selectionStart = Selection.getSelectionStart(AreaEditText.this.getText());
             Layout layout = AreaEditText.this.getLayout();
-            if (!(selectionStart == -1)) {
+            if (selectionStart != -1 && layout!=null) {
                 int line = layout.getLineForOffset(selectionStart);
                 int baseline = layout.getLineBaseline(line);
                 int ascent = layout.getLineAscent(line);

@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
             Bundle args = getArguments();
             int section = args.getInt(ARG_SECTION_NUMBER);
             View rootView = null;
-            if (section==0) {
+            if (section==1) {
                 rootView = inflater.inflate(R.layout.fragment_main, container, false);
             }else if (section==2){
                 rootView = inflater.inflate(R.layout.fragment_two, container, false);
