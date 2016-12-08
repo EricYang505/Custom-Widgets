@@ -10,6 +10,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 /**
  * Created by eyang on 11/28/16.
@@ -25,6 +26,7 @@ public class HeaderAndFooterWrapper extends RecyclerView.Adapter<RecyclerView.Vi
     private Context mContext;
     private final RecyclerView.Adapter mAdapter; //decorate pattern
 
+    ListView d;
 
     public HeaderAndFooterWrapper(Context context, RecyclerView.Adapter adapter){
         this.mContext = context;

@@ -27,4 +27,24 @@
         <attr name="pointerRadius" format="dimension"/>
         <attr name="showPieText" format="boolean"/>
     </declare-styleable>
+    <declare-styleable name="CustomImageView">
+        <attr name="imageText" format="string" />
+        <attr name="imageTextSize" format="dimension" />
+        <attr name="imageTextColor" format="color" />
+        <attr name="image" format="reference" />
+        <attr name="imageScaleType">
+            <enum name="fillXY" value="0" />
+            <enum name="center" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="CustomImageView2">
+        <attr name="imageText2" format="string" />
+        <attr name="imageTextSize2" format="dimension" />
+        <attr name="imageTextColor2" format="color" />
+        <attr name="image2" format="reference" />
+        <attr name="imageScaleType2">
+            <enum name="fillXY" value="0" />
+            <enum name="center" value="1" />
+        </attr>
+    </declare-styleable>
 </resources>

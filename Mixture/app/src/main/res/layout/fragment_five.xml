@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
@@ -11,11 +11,66 @@
         android:id="@+id/areaEditId"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="top|left"
+        android:gravity="center_horizontal"
         android:inputType="textMultiLine"
-        android:lines="12"
+        android:lines="6"
         android:maxLines="100"
-        android:minLines="12"
+        android:minLines="6"
         android:background="@drawable/border_frame"
         android:scrollbars="vertical" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <recordviewer.accela.com.myapplication.CustomImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            custom:image="@mipmap/ic_launcher"
+            custom:imageScaleType="center"
+            custom:imageText="Hello android, this is a test for custom image view!"
+            custom:imageTextColor="@color/colorAccent"
+            custom:imageTextSize="12sp" />
+        <recordviewer.accela.com.myapplication.CustomImageView2
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            custom:image2="@mipmap/ic_launcher"
+            custom:imageScaleType2="center"
+            custom:imageText2="Hello android, this is a test for custom image view!"
+            custom:imageTextColor2="@color/colorAccent"
+            custom:imageTextSize2="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <recordviewer.accela.com.myapplication.CustomImageView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            custom:image="@drawable/google"
+            custom:imageScaleType="center"
+            custom:imageText="Google"
+            custom:imageTextColor="#ff0000"
+            custom:imageTextSize="12sp" />
+        <recordviewer.accela.com.myapplication.CustomImageView2
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            custom:image2="@drawable/google"
+            custom:imageScaleType2="center"
+            custom:imageText2="Google"
+            custom:imageTextColor2="#ff0000"
+            custom:imageTextSize2="12sp" />
+    </LinearLayout>
 </LinearLayout>

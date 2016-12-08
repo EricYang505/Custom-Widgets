@@ -56,14 +56,15 @@ public class AreaEditText extends EditText{
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         // Draw the shadow
+        if (mCurStart != 0) {
             Paint myPaint = new Paint();
             myPaint.setStyle(Paint.Style.STROKE);
             myPaint.setColor(Color.rgb(255, 0, 0));
             myPaint.setStrokeWidth(10);
-            int lp = left+8;
-            int tp = (int) Math.round( top+lines*lineHeight + .5);
-            canvas.drawRect(xx,yy,xx+600, (float) (yy+lineHeight),  myPaint);
-
+            int lp = left + 8;
+            int tp = (int) Math.round(top + lines * lineHeight + .5);
+            canvas.drawRect(xx, yy, xx + 600, (float) (yy + lineHeight), myPaint);
+        }
     }
 
     @Override

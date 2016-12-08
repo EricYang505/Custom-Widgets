@@ -152,8 +152,10 @@ public class MainActivity extends AppCompatActivity {
                         pie.setCurrentItem(0);
                     }
                 });
-            }else{
+            }else if (section==5){
                 rootView = inflater.inflate(R.layout.fragment_five, container, false);
+            }else{
+                rootView = inflater.inflate(R.layout.fragment_six, container, false);
             }
             return rootView;
         }
@@ -205,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 5;
+            return 6;
         }
 
         @Override
@@ -221,6 +223,8 @@ public class MainActivity extends AppCompatActivity {
                     return "SECTION 4";
                 case 4:
                     return "SECTION 5";
+                case 5:
+                    return "SECTION 6";
             }
             return null;
         }
