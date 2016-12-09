@@ -4,14 +4,17 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <recordviewer.accela.com.myapplication.ConnerLayout
+        android:id="@+id/connerLayoutId"
         android:padding="10dp"
         android:background="@android:color/holo_blue_light"
         android:layout_width="match_parent"
         android:layout_height="500dp">
-        <TextView
+        <ImageButton
+            android:id="@+id/imageButtonId"
             android:text="left"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:src="@drawable/image_button"
+            android:layout_width="120dp"
+            android:layout_height="80dp" />
         <TextView
             android:text="right"
             android:layout_width="wrap_content"

@@ -3,6 +3,7 @@ package recordviewer.accela.com.myapplication;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,11 +16,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.TouchDelegate;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -156,6 +160,32 @@ public class MainActivity extends AppCompatActivity {
                 rootView = inflater.inflate(R.layout.fragment_five, container, false);
             }else{
                 rootView = inflater.inflate(R.layout.fragment_six, container, false);
+
+                ConnerLayout connerLayout = (ConnerLayout) rootView.findViewById(R.id.connerLayoutId);
+                final View finalRootView = rootView;
+                connerLayout.post(new Runnable() {// Post in the parent's message queue to make sure the parent lays out its children before you call getHitRect()
+                    @Override
+                    public void run() {
+                        // The bounds for the delegate view (an ImageButton in here)
+                        Rect delegateArea = new Rect();
+                        ImageButton imageButton = (ImageButton) finalRootView.findViewById(R.id.imageButtonId);
+                        imageButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Toast.makeText(getContext(), "Touch occurred within ImageButton touch region.", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        //the hit rectangle for the imageButton
+                        imageButton.getHitRect(delegateArea);
+                        //extend the touch area
+                        delegateArea.right += 100;
+                        delegateArea.bottom += 100;
+                        TouchDelegate touchDelegate = new TouchDelegate(delegateArea, imageButton);
+                        if (View.class.isInstance(imageButton.getParent())){
+                            ((View) imageButton.getParent()).setTouchDelegate(touchDelegate);
+                        }
+                    }
+                });
             }
             return rootView;
         }
