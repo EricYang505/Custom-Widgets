@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-        mViewPager.setPageMargin(40);
+        mViewPager.setPageMargin(5);
         mViewPager.setOffscreenPageLimit(3);
         mViewPager.setPageTransformer(false, new RotateYTransformer(60));
     }
