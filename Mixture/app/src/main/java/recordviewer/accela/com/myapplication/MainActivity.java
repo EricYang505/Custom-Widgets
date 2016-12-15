@@ -27,9 +27,10 @@ import android.widget.Toast;
 
 import java.io.InputStream;
 
-import recordviewer.accela.com.myapplication.recordviewer.accela.com.view.ConnerLayout;
-import recordviewer.accela.com.myapplication.recordviewer.accela.com.view.LargeImageView;
-import recordviewer.accela.com.myapplication.recordviewer.accela.com.view.PieChart;
+import recordviewer.accela.com.myapplication.animation.RotateYTransformer;
+import recordviewer.accela.com.myapplication.customview.ConnerLayout;
+import recordviewer.accela.com.myapplication.customview.LargeImageView;
+import recordviewer.accela.com.myapplication.customview.PieChart;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -62,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        mViewPager.setPageMargin(40);
+        mViewPager.setOffscreenPageLimit(3);
+        mViewPager.setPageTransformer(false, new RotateYTransformer(60));
     }
 
     @Override

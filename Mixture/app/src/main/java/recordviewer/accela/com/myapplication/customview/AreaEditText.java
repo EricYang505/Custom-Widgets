@@ -1,6 +1,12 @@
 
 
-package recordviewer.accela.com.myapplication.recordviewer.accela.com.view;
+/*
+ * *
+ *   *
+ *
+ */
+
+package recordviewer.accela.com.myapplication.customview;
 
 import android.content.Context;
 import android.graphics.Canvas;

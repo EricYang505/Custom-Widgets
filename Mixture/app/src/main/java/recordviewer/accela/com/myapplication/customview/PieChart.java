@@ -1,5 +1,11 @@
 
-package recordviewer.accela.com.myapplication.recordviewer.accela.com.view;
+/*
+ * *
+ *   *
+ *
+ */
+
+package recordviewer.accela.com.myapplication.customview;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;

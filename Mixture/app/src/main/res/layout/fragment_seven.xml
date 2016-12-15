@@ -3,7 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <recordviewer.accela.com.myapplication.recordviewer.accela.com.view.LargeImageView
+    <recordviewer.accela.com.myapplication.customview.LargeImageView
         android:id="@+id/largeImageId"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
