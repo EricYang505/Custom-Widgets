@@ -25,6 +25,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.InputStream;
+
+import recordviewer.accela.com.myapplication.recordviewer.accela.com.view.ConnerLayout;
+import recordviewer.accela.com.myapplication.recordviewer.accela.com.view.LargeImageView;
+import recordviewer.accela.com.myapplication.recordviewer.accela.com.view.PieChart;
+
 public class MainActivity extends AppCompatActivity {
 
     /**
@@ -57,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -158,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
                 });
             }else if (section==5){
                 rootView = inflater.inflate(R.layout.fragment_five, container, false);
-            }else{
+            }else if (section==6){
                 rootView = inflater.inflate(R.layout.fragment_six, container, false);
 
                 ConnerLayout connerLayout = (ConnerLayout) rootView.findViewById(R.id.connerLayoutId);
@@ -186,6 +191,13 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
+            } else {
+                rootView = inflater.inflate(R.layout.fragment_seven, container, false);
+                LargeImageView imageView = (LargeImageView) rootView.findViewById(R.id.largeImageId);
+//              InputStream inputStream = getResources().getAssets().open("/raw/world.png");
+                int resourceId = getResources().getIdentifier("world", "raw", getContext().getPackageName());
+                InputStream inputStream = getResources().openRawResource(resourceId);
+                imageView.setInputStream(inputStream);
             }
             return rootView;
         }
@@ -237,7 +249,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 6;
+            return 7;
         }
 
         @Override
@@ -255,6 +267,8 @@ public class MainActivity extends AppCompatActivity {
                     return "SECTION 5";
                 case 5:
                     return "SECTION 6";
+                case 6:
+                    return "SECTION 7";
             }
             return null;
         }

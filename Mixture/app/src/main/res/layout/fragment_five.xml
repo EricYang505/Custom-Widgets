@@ -7,7 +7,7 @@
     android:padding="16dp"
     android:orientation="vertical">
 
-    <recordviewer.accela.com.myapplication.AreaEditText
+    <recordviewer.accela.com.myapplication.recordviewer.accela.com.view.AreaEditText
         android:id="@+id/areaEditId"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <recordviewer.accela.com.myapplication.CustomImageView
+        <recordviewer.accela.com.myapplication.recordviewer.accela.com.view.CustomImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -33,7 +33,7 @@
             custom:imageText="Hello android, this is a test for custom image view!"
             custom:imageTextColor="@color/colorAccent"
             custom:imageTextSize="12sp" />
-        <recordviewer.accela.com.myapplication.CustomImageView2
+        <recordviewer.accela.com.myapplication.recordviewer.accela.com.view.CustomImageView2
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <recordviewer.accela.com.myapplication.CustomImageView
+        <recordviewer.accela.com.myapplication.recordviewer.accela.com.view.CustomImageView
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -61,7 +61,7 @@
             custom:imageText="Google"
             custom:imageTextColor="#ff0000"
             custom:imageTextSize="12sp" />
-        <recordviewer.accela.com.myapplication.CustomImageView2
+        <recordviewer.accela.com.myapplication.recordviewer.accela.com.view.CustomImageView2
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"

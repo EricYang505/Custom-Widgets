@@ -3,7 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <recordviewer.accela.com.myapplication.ConnerLayout
+    <recordviewer.accela.com.myapplication.recordviewer.accela.com.view.ConnerLayout
         android:id="@+id/connerLayoutId"
         android:padding="10dp"
         android:background="@android:color/holo_blue_light"
@@ -29,6 +29,6 @@
             android:background="@color/colorAccent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-    </recordviewer.accela.com.myapplication.ConnerLayout>
+    </recordviewer.accela.com.myapplication.recordviewer.accela.com.view.ConnerLayout>
 
 </LinearLayout>
